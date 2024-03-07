@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Kaiseki\WordPress\WpRocket;
 
+use Kaiseki\WordPress\WpRocket\DisableAutoPurge\DisableAutoPurge;
+use Kaiseki\WordPress\WpRocket\DisableAutoPurge\DisableAutoPurgeFactory;
 use Kaiseki\WordPress\WpRocket\PreloadConfigurator\PreloadConfigurator;
 use Kaiseki\WordPress\WpRocket\PreloadConfigurator\PreloadConfiguratorFactory;
 
@@ -25,13 +27,12 @@ final class ConfigProvider
 //                    ->onRocketAfterSaveDynamicLists(),
             ],
             'hook' => [
-                'provider' => [
-                    PreloadConfigurator::class,
-                ],
+                'provider' => [],
             ],
             'dependencies' => [
                 'aliases' => [],
                 'factories' => [
+                    DisableAutoPurge::class => DisableAutoPurgeFactory::class,
                     PreloadConfigurator::class => PreloadConfiguratorFactory::class,
                 ],
             ],
