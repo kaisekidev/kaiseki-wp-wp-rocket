@@ -1,0 +1,23 @@
+{
+  "symbol-whitelist": [
+    "null", "true", "false",
+    "static", "self", "parent",
+    "array", "string", "int", "float", "bool", "iterable", "callable", "void", "object",
+    "add_action",
+    "add_filter",
+    "apply_filters",
+    "WP_ROCKET_PRELOAD_BATCH_SIZE",
+    "WP_ROCKET_PRELOAD_INTERVAL",
+    "WP_ROCKET_PRELOAD_REQUEST_DELAY"
+  ],
+  "php-core-extensions": [
+    "Core",
+    "date",
+    "pcre",
+    "Phar",
+    "Reflection",
+    "SPL",
+    "standard"
+  ],
+  "scan-files": []
+}
