@@ -18,13 +18,13 @@ final class ConfigProvider
     {
         return [
             'wp_rocket' => [
-//                'preload_config' => \Kaiseki\WordPress\WpRocket\PreloadConfigurator\PreloadConfig::create()
-//                    ->withBatchSize(45)
-//                    ->withCronInterval(60)
-//                    ->withRequestsDelay(0.5),
-//                'disable_auto_purge' => \Kaiseki\WordPress\WpRocket\DisableAutoPurge\DisableAutoPurgeConfig::create()
-//                    ->onTermChange()
-//                    ->onRocketAfterSaveDynamicLists(),
+                //                'preload_config' => \Kaiseki\WordPress\WpRocket\PreloadConfigurator\PreloadConfig::create()
+                //                    ->withBatchSize(45)
+                //                    ->withCronInterval(60)
+                //                    ->withRequestsDelay(0.5),
+                //                'disable_auto_purge' => \Kaiseki\WordPress\WpRocket\DisableAutoPurge\DisableAutoPurgeConfig::create()
+                //                    ->onTermChange()
+                //                    ->onRocketAfterSaveDynamicLists(),
             ],
             'hook' => [
                 'provider' => [],
