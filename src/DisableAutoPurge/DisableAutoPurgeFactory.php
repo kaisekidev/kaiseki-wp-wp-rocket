@@ -12,9 +12,10 @@ final class DisableAutoPurgeFactory
     public function __invoke(ContainerInterface $container): DisableAutoPurge
     {
         $config = Config::fromContainer($container);
-        /** @var ?DisableAutoPurgeConfig $purgeConfig */
         $purgeConfig = $config->softGet('wp_rocket.disable_auto_purge');
 
-        return new DisableAutoPurge($purgeConfig);
+        return new DisableAutoPurge(
+            $purgeConfig instanceof DisableAutoPurgeConfig ? $purgeConfig : null,
+        );
     }
 }

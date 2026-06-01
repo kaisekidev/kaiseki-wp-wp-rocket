@@ -10,7 +10,7 @@ final class DisableAutoPurgeConfig
     private bool $onTermCreate = false;
     private bool $onTermEdit = false;
     private bool $onTermDelete = false;
-    private bool $onRocketAfterSaveDynamicLists;
+    private bool $onRocketAfterSaveDynamicLists = false;
 
     public static function create(): self
     {

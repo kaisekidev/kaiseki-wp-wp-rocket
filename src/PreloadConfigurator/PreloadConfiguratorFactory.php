@@ -12,9 +12,10 @@ final class PreloadConfiguratorFactory
     public function __invoke(ContainerInterface $container): PreloadConfigurator
     {
         $config = Config::fromContainer($container);
-        /** @var ?PreloadConfig $preloadConfig */
         $preloadConfig = $config->softGet('wp_rocket.preload_config');
 
-        return new PreloadConfigurator($preloadConfig);
+        return new PreloadConfigurator(
+            $preloadConfig instanceof PreloadConfig ? $preloadConfig : null,
+        );
     }
 }
